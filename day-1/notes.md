@@ -87,9 +87,9 @@ The verify output should show `"KeyType": "rsa"` and `"KeyName": "xfusion-kp"`.
 
 ## Verification
 
-**AWS Console > Successfully created key pair**  
+**AWS Console > Key pair verification**  
 
-![Successfully created key pair](./Key-pairs-EC2-us-east-1-11-17-2026_02_13_PM.png)
+![AWS Console > Key pair verification](./Key-pairs-EC2-us-east-1-11-17-2026_02_13_PM.png)
 
 ---
 
@@ -102,3 +102,63 @@ The verify output should show `"KeyType": "rsa"` and `"KeyName": "xfusion-kp"`.
 **Day - 1: Completed**  
 
 ![Day - 1: Completed](./KodeKloud-Engineer-Practice-11-17-2026_02_44_PM.png)
+
+---
+
+## Additional Notes
+
+**#1 Console and CLI can use different credentials.**  
+
+The console uses a username and password, while the CLI uses an access key ID and secret.  
+
+Always run `aws sts get-caller-identity` first to confirm which identity the CLI is using.
+
+---
+
+**#2 Getting the private key with the AWS CLI**  
+
+In case if I am using AWS CLI to generate key pair then how do I get it? Because in AWS Console it gets downloaded automatically.
+
+The CLI doesn't download a file. It **prints the private key in its response**, and you have to capture it yourself. That's what the `> xfusion-kp.pem` part of the command does:
+
+```bash
+aws ec2 create-key-pair \
+  --key-name xfusion-kp \
+  --key-type rsa \
+  --query 'KeyMaterial' \
+  --output text \
+  --region us-east-1 > xfusion-kp.pem
+```
+
+- `--query 'KeyMaterial'` picks out only the private key from the JSON response.
+- `--output text` prints it as plain text, without JSON quotes or `\n` characters.
+- `> xfusion-kp.pem` saves it to a file in your current directory on the `aws-client` host.
+
+Then run `chmod 400 xfusion-kp.pem` and `cat xfusion-kp.pem`. The file should start with `-----BEGIN RSA PRIVATE KEY-----`.
+
+If you forget the `>` redirect, the key just scrolls past on screen and AWS can't show it to you again.
+
+Since you already created `xfusion-kp` in the console, you can't repeat this for the same name. To practice, use a different name (e.g. `test-kp`), then delete it afterwards:
+
+```bash
+aws ec2 delete-key-pair --key-name test-kp --region us-east-1
+```
+
+---
+
+**#3 Key pairs and instances**  
+
+I can see in AWS Console that there are no EC2 instances at the moment.  
+That means EC2 key pair is the same for all the instances, it differs region wise. Is that correct?  
+
+You're right that key pairs are regional, but one part needs correcting. **A key pair isn't automatically "the same for all instances."** It's an independent resource that exists whether or not you have any instances. That's why `xfusion-kp` is there even though you have zero EC2 instances.
+
+- **You choose the key pair when you launch each instance.** Instance A can use `xfusion-kp`, and instance B can use a different key pair.
+- **You can reuse one key pair across many instances** in the same region, but that's your choice, not automatic.
+- **The key pair is fixed at launch.** You can't swap it afterwards through the console (you'd have to edit `~/.ssh/authorized_keys` on the instance).
+- **A key pair belongs to a region.** It exists only in `us-east-1`, so to launch in another region you need a key pair created or imported there.
+
+Think of it as a lock-and-key arrangement:  
+AWS keeps the lock (the public key), and you keep the key (the private `.pem`). Each instance you launch gets one lock installed.
+
+You can have multiple locks & keys, then you can use them to protect your resources (home, bicycle, scooter, car etc.).  
