@@ -1,6 +1,6 @@
 # 100 Days of Cloud
 
-Take this challenge at [https://kodekloud.com/](https://kodekloud.com/).
+Take this challenge at [https://kodekloud.com/100-days-of-cloud](https://kodekloud.com/100-days-of-cloud).
 
 **Index**  
 
