@@ -97,9 +97,9 @@ The verify output should show `"KeyType": "rsa"` and `"KeyName": "xfusion-kp"`.
 
 ---
 
-**Day - 1: Completed**  
+**Day - 1: Create Key Pair ✅**  
 
-![Day - 1: Completed](./KodeKloud-Engineer-Practice-11-17-2026_02_44_PM.png)
+![Day - 1: Create Key Pair ✅](./day-1-complete.png)
 
 ---
 
