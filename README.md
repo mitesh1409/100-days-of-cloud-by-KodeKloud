@@ -7,3 +7,4 @@ This repo contains problem statement, solution with verification & notes for eac
 **Index**  
 
 1. [Day 1: Create Key Pair](./day-1/notes.md)
+2. [Day 2: Create Security Group](./day-2/notes.md)
