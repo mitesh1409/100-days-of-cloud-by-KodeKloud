@@ -26,9 +26,7 @@ Notes:
 
 ## Solution
 
-# Day 2: Create a Security Group (`datacenter-sg`)
-
-## Option A: AWS Console
+### Using AWS Console
 
 1. **Sign in** using the credentials KodeKloud gives you for this task.
 2. **Check the region** in the top-right corner. It must say **N. Virginia (us-east-1)**.
@@ -49,7 +47,7 @@ Notes:
 8. Click **Create security group**.
 9. **Verify:** open `datacenter-sg` and check the **Inbound rules** tab for both rules.
 
-## Option B: AWS CLI (from the `aws-client` host)
+### Using AWS CLI
 
 ```bash
 # 1. Find the default VPC ID
@@ -90,14 +88,14 @@ In the verify output, look for `"GroupName": "datacenter-sg"`, the description, 
 
 If you already created it in the console, don't run step 2 again. It would fail with `InvalidGroup.Duplicate`. Use only the verify command with `--group-names datacenter-sg` instead of `--group-ids`.
 
-## Common mistakes to avoid
+### Common mistakes to avoid
 
 - Creating it in the wrong region or in a non-default VPC.
 - A typo in the **description**. It can't be edited after creation, so you'd have to delete and recreate the group.
 - Picking `Custom TCP` instead of the `HTTP` / `SSH` types. The ports are the same, but match the task wording.
 - Using `My IP` as the source instead of `0.0.0.0/0`. The task asks for open access.
 
-## Key Takeaways
+### Key Takeaways
 
 1. **A security group is a virtual firewall** for resources like EC2 instances, attached at the network-interface level.
 2. **Inbound is denied by default.** You only add *allow* rules. There are no deny rules in security groups.
