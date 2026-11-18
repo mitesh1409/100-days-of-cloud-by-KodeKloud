@@ -12,15 +12,9 @@ For this task, create a EC2 key pair with the following requirements:
 
 ---
 
-Use below given AWS Credentials: (You can run the `showcreds` command on `aws-client` host to retrieve these credentials)
+AWS Credentials to complete the task are provided by https://kodekloud.com when you start this challenge.
 
-| Console URL | https://000311537719.signin.aws.amazon.com/console?region=us-east-1 |
-| Username | kk_labs_user_760878 |
-| Password | YqSG^52q!Iah |
-| Start Time | Tue Nov 17 08:11:37 UTC 2026 |
-| End Time | Tue Nov 17 09:11:37 UTC 2026 |
-
-Notes:
+Notes:  
 
 * Create the resources only in "us-east-1" region.
 
@@ -41,8 +35,6 @@ Notes:
    - **Private key file format:** `.pem` (the default for Linux/macOS/OpenSSH. Use `.ppk` only for PuTTY.)
 7. Click **Create key pair**. The `.pem` file downloads automatically. This is your only chance to download it, so keep it safe.
 8. **Verify:** `xfusion-kp` should now appear in the Key Pairs list with type `rsa`.
-
-![AWS Console > Create key pair](./Create-key-pair-EC2-us-east-1-11-17-2026_02_10_PM.png)
 
 ### Using AWS CLI
 
@@ -86,6 +78,12 @@ The verify output should show `"KeyType": "rsa"` and `"KeyName": "xfusion-kp"`.
 ---
 
 ## Verification
+
+**AWS Console > Create key pair**  
+
+![AWS Console > Create key pair](./Create-key-pair-EC2-us-east-1-11-17-2026_02_10_PM.png)
+
+---
 
 **AWS Console > Key pair verification**  
 
