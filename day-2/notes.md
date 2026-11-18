@@ -137,3 +137,9 @@ If you already created it in the console, don't run step 2 again. It would fail 
 
 
 ![AWS CLI > Security Group Verification](./bash-c-sudo-su-aws-client--11-18-2026_12_59_PM.png)
+
+---
+
+**Day - 2: Create Security Group ✅**  
+
+![Day - 2: Create Security Group ✅](./day-2-complete.png)
