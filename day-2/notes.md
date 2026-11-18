@@ -60,7 +60,7 @@ echo $VPC_ID
 
 # 2. Create the security group and capture its ID
 SG_ID=$(aws ec2 create-security-group \
-  --group-name datacenter-sgg \
+  --group-name datacenter-sg \
   --description "Security group for Nautilus App Servers" \
   --vpc-id $VPC_ID \
   --query 'GroupId' \
