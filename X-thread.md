@@ -33,3 +33,19 @@ Created a security group in the default VPC via AWS Console + CLI.
 Notes + solution: https://github.com/mitesh1409/100-days-of-cloud-by-KodeKloud/tree/main
 
 One more step forward. Keep rolling.
+
+---
+
+## #3
+
+Day 3/100 of #100DaysOfCloud with @KodeKloudHQ ✅
+
+Created a subnet in the default VPC via AWS Console + CLI.
+
+📍 A subnet lives in a single AZ
+🧮 AWS reserves 5 IPs per subnet
+🛣️ Public vs private = route table, not the name
+
+Notes + solution: https://github.com/mitesh1409/100-days-of-cloud-by-KodeKloud/tree/main
+
+3 challenges done in 3 days 🐢
