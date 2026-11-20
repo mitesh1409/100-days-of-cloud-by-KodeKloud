@@ -111,12 +111,6 @@ If you already created it in the console, run only step 4.
 
 ---
 
-**Day - 3: Create Subnet ✅**  
-
-![Day - 3: Create Subnet ✅](./day-3-complete.png)
-
----
-
 ## Additional Todos
 
 Need to learn/explore about the following:  
