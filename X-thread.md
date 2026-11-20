@@ -49,3 +49,17 @@ Created a subnet in the default VPC via AWS Console + CLI.
 Notes + solution: https://github.com/mitesh1409/100-days-of-cloud-by-KodeKloud/tree/main
 
 3/100 challenges done 🐢
+
+---
+
+## #4
+
+Day 4/100 of #100DaysOfCloud with @KodeKloudHQ ✅
+
+Enabled versioning on an S3 bucket via AWS Console + CLI.
+
+🗂️ Every overwrite keeps the old version
+🪦 Deletes just add a delete marker
+♻️ Can be suspended, never fully removed
+
+Notes + solution: https://github.com/mitesh1409/100-days-of-cloud-by-KodeKloud/tree/main
