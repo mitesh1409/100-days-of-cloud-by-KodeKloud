@@ -48,4 +48,4 @@ Created a subnet in the default VPC via AWS Console + CLI.
 
 Notes + solution: https://github.com/mitesh1409/100-days-of-cloud-by-KodeKloud/tree/main
 
-3 challenges done in 3 days 🐢
+3/100 challenges done 🐢
