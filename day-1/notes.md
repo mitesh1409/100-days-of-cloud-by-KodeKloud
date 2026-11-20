@@ -97,12 +97,6 @@ The verify output should show `"KeyType": "rsa"` and `"KeyName": "xfusion-kp"`.
 
 ---
 
-**Day - 1: Create Key Pair ✅**  
-
-![Day - 1: Create Key Pair ✅](./day-1-complete.png)
-
----
-
 ## Additional Notes
 
 **#1 Console and CLI can use different credentials.**  
