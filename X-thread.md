@@ -63,3 +63,17 @@ Enabled versioning on an S3 bucket via AWS Console + CLI.
 ♻️ Can be suspended, never fully removed
 
 Notes + solution: https://github.com/mitesh1409/100-days-of-cloud-by-KodeKloud/tree/main
+
+---
+
+## #5
+
+Day 5/100 of #100DaysOfCloud with @KodeKloudHQ ✅
+
+Created a 2 GiB gp3 EBS volume via AWS Console + CLI.
+
+💾 EBS volumes live in a single AZ
+⚡ gp3: 3000 IOPS baseline, cheaper than gp2
+💸 Unattached volumes still cost money
+
+Notes + solution: https://github.com/mitesh1409/100-days-of-cloud-by-KodeKloud/tree/main
