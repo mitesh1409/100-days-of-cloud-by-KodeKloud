@@ -11,3 +11,4 @@ This repo contains problem statement, solution with verification & notes for eac
 3. [Day 3: Create Subnet](./day-3/notes.md)
 4. [Day 4: Enable Versioning for S3 Bucket](./day-4/notes.md)
 5. [Day 5: Create GP3 Volume](./day-5/notes.md)
+6. [Day 6: Launch EC2 Instance](./day-6/notes.md)

@@ -77,3 +77,17 @@ Created a 2 GiB gp3 EBS volume via AWS Console + CLI.
 💸 Unattached volumes still cost money
 
 Notes + solution: https://github.com/mitesh1409/100-days-of-cloud-by-KodeKloud/tree/main
+
+---
+
+## #6
+
+Day 6/100 of #100DaysOfCloud with @KodeKloudHQ ✅
+
+Launched my first EC2 instance via AWS Console + CLI.
+
+🖥️ Instance = AMI + type + key pair + SG + subnet
+🔑 Key pair is chosen at launch
+🚪 Default SG doesn't open SSH
+
+Notes + solution: https://github.com/mitesh1409/100-days-of-cloud-by-KodeKloud/tree/main
